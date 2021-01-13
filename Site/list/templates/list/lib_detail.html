@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+
+
+{{ book.title }}
+
+{% endblock %}
+
+{% block content %}
+
+<a href="{% url 'library' %}"> <button class="btn btn-info">Вернуться к списку</button></a>
+
+<div class="features">
+    <h1>{{ lib.title }}</h1>
+    <p>{{ lib.text }}</p>
+
+ </div>
+
+ <p>Шаблон работает</p>
+{% endblock %}

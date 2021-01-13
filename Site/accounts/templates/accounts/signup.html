@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+{% block content %}
+
+<div class="features">
+
+    <h2>Sign up</h2>
+    <form method="post">
+        {% csrf_token %}<br>
+        {{ user_form.as_p }}<br>
+        <span>{{ error }}</span><br>
+
+        <button type="submit">Sign up</button>
+    </form>
+</div>
+
+
+{% endblock %}

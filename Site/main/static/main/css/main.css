@@ -1,0 +1,210 @@
+body {
+
+    background-image: url(../img/pl2.png);
+    background-attachment: fixed;
+    background-size:100%;
+
+}
+
+
+.two {
+
+    background-image: url(../img/plakatempty.png);
+    background-attachment: fixed;
+    background-size:100%;
+
+}
+
+aside {
+    position:fixed;
+    word-wrap: break-word;
+    float: left;
+    background: black;
+    width: 15%;
+
+    height: 100vh;
+    font-weight:bold;
+    border:solid black;
+    border-width: 0px 7px 7px 5px;
+    text-align:left;
+    box-shadow: 5px 5px 2px DarkRed;
+}
+
+
+
+aside ul {list-style:none}
+aside ul li {
+    float: center;
+
+    font-family: lucida console;
+    font-size:25px;
+    background:Black;
+    font-weight:bold;
+    color: White;
+    display: block;
+    margin-top: 10px;
+    transition: transform.2s ease;
+}
+aside ul li:hover, aside ul a:hover {
+    color: black;
+    box-shadow: 0 0 5px yellow;
+    background: yellow;
+    text-decoration: none;
+    transform: matrix(1.1,0,0,1,-9,0);
+
+}
+
+aside ul li:active {
+
+transform: matrix(1.1,0,0,1,3,0);
+
+    color: black;
+    box-shadow: 0 0 5px yellow;
+    background: yellow;
+}
+
+main .features{
+
+    float:right;
+    padding:1.5%;
+    padding-right:5px;
+    color: black;
+    text-align:center;
+    width: 80%;
+}
+
+.alert-warning{
+    border-radius:0px;
+    color:AntiqueWhite;
+    box-shadow: 0 0 3px DarkRed;
+    border-color:DarkRed;
+    background-color:DarkRed;
+    float:left;
+    text-align:left;
+    word-wrap: break-word;
+    height:400px;
+    width:250px;
+    margin: 14px;
+    margin-top: 30px;
+    transition: transform.4s ease;
+}
+
+.alert-warning:hover {
+
+    border-radius:0px;
+    color:black;
+    border-color:yellow;
+    box-shadow: 0 0 5px yellow;
+    background-color:yellow;
+    text-decoration: none;
+    transform: scale(1.2);
+
+}
+.alert-warning:active {
+
+    border-radius:0px;
+    color:black;
+    border-color:yellow;
+    box-shadow: 0 0 5px yellow;
+    background-color:yellow;
+    text-decoration: none;
+    transform: scale(1.2);
+}
+
+.alert-warning:focus {
+    background-color:DarkRed;
+    transform: scaleX(1.25);
+}
+
+.zag {
+    float: top;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.namecat {
+    background:DarkRed;
+    text-align:right;
+    font-family: lucida console;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom:5%;
+    color:black;
+    box-shadow: 0 0 5px DarkRed
+
+}
+
+.auctor {
+
+    margin-top: 35px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.detail_auctor {
+
+    background:DarkRed;
+    text-align:center;
+    font-family: lucida console;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom:5%;
+    color:black;
+    box-shadow: 0 0 5px DarkRed;
+}
+
+.detail_text {
+    font-family: lucida console;
+    font-size: 26px;
+    text-align:justify;
+
+
+}
+
+.container {
+    height:100vh;
+    width: 100%;
+    float:center;
+    padding-right:1%;
+    padding-top:5%;
+
+}
+
+.back {
+    position:fixed;
+    border-style:none;
+    float:left;
+    height: 100vh;
+    width: 2%;
+    background-color:maroon;
+    transition: background-color.3s ease;
+    transition: transform.4s ease;
+
+}
+
+
+
+.back:hover{
+
+    box-shadow: 0 0 3px DarkRed;
+    background-color:DarkRed;
+    transform: scaleX(2);
+    border-style:none;
+
+}
+
+
+
+.back:focus{
+    box-shadow: 0 0 3px yellow;
+    background-color:yellow;
+    border: none;
+    outline:none;
+    transform: scaleX(4);
+}
+
+::-webkit-scrollbar { /* chrome based */
+    width: 0px;  /* ширина scrollbar'a */
+    background: transparent;  /* опционально */
+}
+

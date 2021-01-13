@@ -1,0 +1,12 @@
+{% extends 'main/layout.html' %}
+{% block content %}
+
+<div class="features">
+    <p>{{ customer }}</p>
+    <ul>
+        {% for b in all_books %}
+            <p>{{ b.article.title }} ---- {{ b.customer }}  ---- <a href="{% url 'remove_book' b.article.pk b.customer.pk%}">Сдал книгу</a></p>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

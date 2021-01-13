@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+ Проверка шаблона
+{% endblock %}
+
+{% block content %}
+
+<div class="features">
+
+  <p class="namecat">Главная страница</p>
+  <button class="btn btn-warning">Список</button>
+ </div>
+
+ <p>Шаблон работает</p>
+ {% include 'main/test.html' %}
+{% endblock %}

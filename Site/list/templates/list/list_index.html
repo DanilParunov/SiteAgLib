@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+
+
+
+ Список
+{% endblock %}
+
+{% block content %}
+
+<div class="features">
+
+  <p class="namecat">СПИСОК ЛИТЕРАТУРЫ</p>
+
+    {% for el in list %}
+    <a href="{% url 'book_detail' el.id %}" class="name_book"><div class="alert alert-warning"><p class="zag">{{ el.title }}</p><p class="auctor">{{ el.anons }}</p></div></a>
+    {% endfor %}
+ </div>
+
+
+{% endblock %}

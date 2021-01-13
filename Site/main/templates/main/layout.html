@@ -1,0 +1,59 @@
+{% load static %}
+
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>  {% block title %} {% endblock %}</title>
+
+</head>
+<body>
+
+    <aside>
+
+
+{% if user.is_authenticated %}
+        <p>Добро пожаловать,{{ user.username }}!</p><p><a href="{% url 'logout' %}">Выйти</a></p>
+      {% else %}
+        <p>Вход в аккаунт не выполнен</p>
+        <a href="{% url 'login' %}">Войти в аккаунт</a>
+         <a href="{% url 'signup' %}">Регистрация</a>
+      {% endif %}
+
+        <ul>
+
+           <a href="{% url 'home' %}"> <li>ГЛАВНАЯ</li></a>
+            <a href="{% url 'list_home' %}"> <li>СПИСОК КНИГ</li></a>
+             <a href="{% url 'library' %}"> <li>СПИСОК БИБЛИОТЕК</li></a>
+             <a href="{% url 'about' %}"> <li>О НАС</li></a>
+
+
+        </ul>
+{% if user.is_authenticated %}
+        <ul>
+            <li></li>
+        <a href="{% url 'profile' %}"><li>Личный кабинет</li></a>
+        </ul>
+        {% endif %}
+ <a href="{% url 'create' %}"> <li><button class="btn btn-info">Дополнить список</button></li></a>
+
+    </aside>
+    <main>
+
+<!--# content, title имена блоков, которые динамически можно менять-->
+        {% block content %}
+
+
+
+        {% endblock %}
+
+    </main>
+
+
+
+</body>
+</html>
